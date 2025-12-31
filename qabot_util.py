@@ -146,7 +146,7 @@ prompt = ChatPromptTemplate.from_messages([
 
 # 8. Create and Execute the Retrieval Chain
 def ask_question(question):
-    question_answer_chain = create_stuff_documents_chain(get_llm(), prompt)
+    question_answer_chain = create_stuff_documents_chain(llm, prompt)
     rag_chain = create_retrieval_chain(retriever, question_answer_chain)
     response = rag_chain.invoke({"input": question})
     return response
@@ -164,6 +164,7 @@ print("Running RAG Chain...")
 print("Initializing vector database and retriever...")
 vector_db = create_vector_database()
 retriever = retriever()
+llm = get_llm()
 ## Uncomment this to test directly instead UI
 #add_documents_to_vector_database(text_splitter(document_loader()))
 #response = ask_question("What are the most common adverse reactions of Iwilfin?")
