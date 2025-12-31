@@ -1,6 +1,7 @@
 langchain
 langchain-core
 langchain_classic
+langchain_community
 langchain-mistralai
 langchain-chroma
 langchain-text-splitters
