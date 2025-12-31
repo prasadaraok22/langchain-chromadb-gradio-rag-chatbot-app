@@ -1,0 +1,11 @@
+langchain
+langchain-core
+langchain_classic
+langchain-mistralai
+langchain-chroma
+langchain-text-splitters
+truststore
+logging
+pypdf
+gradio
+jq
